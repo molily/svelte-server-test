@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../svelte-render-server.js", "../Child.svelte", "../SvelteTestComp.svelte"],
+  "sourcesContent": ["import { render } from 'svelte/server';\nimport SvelteTestComp from './SvelteTestComp.svelte';\n\nconst { head, body } = render(SvelteTestComp, { props: {} });\n\nconsole.log('body', body);\nconsole.log('head', head);\n", "<script>\n  /** @type {string} */\n  export let hello;\n</script>\n\n<p>Child.svelte hello: {hello}</p>\n\n<style>\n  * {\n    border: 2px solid blue;\n    padding: 1em;\n  }\n</style>\n", "<script>\n  import Child from './Child.svelte';\n\n  let hello = 'hello';\n</script>\n\n<p>SvelteTestComp.svelte</p>\n\n<Child bind:hello />\n\n<style>\n  * {\n    border: 2px solid red;\n    padding: 1em;\n  }\n</style>\n"],
+  "mappings": ";AAAA,SAAS,cAAc;A;;;;;;;;;;;;MCEV,QAAK,QAAA,OAAA;4EAGM,KAAK,CAAA;;;;;;;;;;;MCFvB,QAAQ;;;;;;;;;;;;;;;;;;;;;;;;;;AFAd,IAAM,EAAE,MAAM,KAAK,IAAI,OAAO,gBAAgB,EAAE,OAAO,CAAC,EAAE,CAAC;AAE3D,QAAQ,IAAI,QAAQ,IAAI;AACxB,QAAQ,IAAI,QAAQ,IAAI;",
+  "names": []
+}
