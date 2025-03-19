@@ -6,14 +6,24 @@ import * as $2 from "svelte/internal/server";
 
 // Child.svelte
 import * as $ from "svelte/internal/server";
+var $$css = {
+  hash: "svelte-t13rfg",
+  code: ".svelte-t13rfg {border:2px solid blue;padding:1em;}"
+};
 function Child($$payload, $$props) {
+  $$payload.css.add($$css);
   let hello = $$props["hello"];
   $$payload.out += `<p class="svelte-t13rfg">Child.svelte hello: ${$.escape(hello)}</p>`;
   $.bind_props($$props, { hello });
 }
 
 // SvelteTestComp.svelte
+var $$css2 = {
+  hash: "svelte-1d6hxxn",
+  code: ".svelte-1d6hxxn {border:2px solid red;padding:1em;}"
+};
 function SvelteTestComp($$payload) {
+  $$payload.css.add($$css2);
   let hello = "hello";
   let $$settled = true;
   let $$inner_payload;
